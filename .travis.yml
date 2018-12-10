@@ -1,6 +1,7 @@
 language: ruby
-script:
+before_script:
 - bundle exec bin/rails db:create
 - bundle exec bin/rails db:migrate
 - bundle exec rake
+script:
 - bundle exec rspec
