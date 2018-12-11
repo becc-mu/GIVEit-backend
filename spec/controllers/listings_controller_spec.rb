@@ -30,4 +30,31 @@ RSpec.describe ListingsController, type: :controller do
       ])
     end
   end
+  describe "GET #show" do
+    it "returns JSON of the listing" do
+      listing = Listing.create({
+        title: 'Listing Title',
+        description: 'Description',
+        start_date: 'Start Date',
+        end_date: 'End Date',
+        listing_type: 'Listing Type',
+        location: 'Location'
+      })
+      get :show, params: {id: listing.to_param}
+      expect(response).to be_successful
+      expect(JSON.parse(response.body)).to eq(
+        {
+          "id"=>listing.id,
+          "title"=>listing.title,
+          "description"=>listing.description,
+          "start_date"=>listing.start_date,
+          "end_date"=>listing.end_date,
+          "listing_type"=>listing.listing_type,
+          "location"=>listing.location,
+          "created_at"=>listing.created_at.as_json,
+          "updated_at"=>listing.updated_at.as_json
+        }
+      )
+    end
+  end
 end
