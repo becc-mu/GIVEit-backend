@@ -7,9 +7,9 @@ script:
 - bundle exec rspec
 deploy:
   provider: heroku
-  app: giveit-backend
   api_key:
     secure: bLcC0e6UKzKAhE6BLVOVNL3D9/OWE2iT6QkAotiTLF4R5UqJDkWFR7ulK9f9z2kAavN5YUGUGdL+EZPY1MtrqJl8KsuSjqoU2IA9ovyohuHzpCouibR3mLN3UXORaNc3mW9aYYRHLYqWERm8SN9nU7D6nWcIhkTdClLGPLIpC/eajpPO62An5Nh/robcvd3+yMaPCZ1LKzMC9QQ+b/VkkdwEd+mp5crvSgk6N3Rr8OvQZratO50L6RyqWnQQ7WOf9qNJ+5QfgXvMvmPGtKzD+hWMmXsP8/tfYDhNjnrn63rHlsPVvleDjjFgsIEWLeKbywjsRmuNfT0vKCToDSv/iN9ulFgro4+NNEw6T5/Ett9hA3yw4B7GsJDCvP/i2MruorWYu1rsa7r34/f7y0bVh0eKZrEXNXHVcUg4vOpRxnv7urerni90CMUnkwxpeeMSXwM7FszEn8Ci/LoCpDuwNxuQCl4I3KqP6m8c32N09ic83NDy5blfnNGImqo9XDLow0EmRudJCf3+i3Zsd89+XZA0jCdXZo3gzrsPxYGSfLjoXd/0n65EcP+oG+hiaJVz7son2lNmnD0lzHQFSzPuMwGfpRd6Kie+M2H+ftLj4cF8Upg26l/NYGA3D8sbszkisQz/1f27ZIX8WkKSPmbj8MkF38392EM7959ZCnaqr5Q=
+  app: GIVEit-backend
   on:
-    repo: becc-mu/giveit-backend
+    repo: becc-mu/GIVEit-backend
   run: rails db:migrate
