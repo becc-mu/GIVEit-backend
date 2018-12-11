@@ -17,19 +17,22 @@ RSpec.describe ListingsController, type: :controller do
       get :index, params: {}
       expect(response).to be_successful
 
+      p listing
       p JSON.parse(response.body)
 
       expect(JSON.parse(response.body)).to eq([
         {
-          "id" => listing.id,
-          "title" => listing.title,
-          "description" => listing.description,
-          "start_date" => listing.start_date,
-          "end_date" => listing.end_date,
-          "listing_type" => listing.listing_type,
-          "location" => listing.location
+          "id"=>listing.id,
+          "title"=>listing.title,
+          "description"=>listing.description,
+          "start_date"=>listing.start_date,
+          "end_date"=>listing.end_date,
+          "listing_type"=>listing.listing_type,
+          "location"=>listing.location,
+          "created_at"=>listing.created_at.as_json,
+          "updated_at"=>listing.updated_at.as_json
         }
-        ])
+      ])
     end
   end
 end

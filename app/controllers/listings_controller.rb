@@ -4,10 +4,4 @@ class ListingsController < ApplicationController
 
     render json: @listings
   end
-
-  def new
-  end
-
-  def create
-  end
 end
