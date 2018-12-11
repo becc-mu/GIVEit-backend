@@ -14,9 +14,9 @@ class ListingsController < ApplicationController
     @listing = Listing.new(create_listing_params)
 
     if @listing.save
-      render json: @listing, status: :created, location: @listing 
+      render json: @listing, status: :created, location: @listing
     else
-      # render json: @listing.errors, status: :unprocessable_entity
+      render json: @listing.errors, status: :unprocessable_entity
     end
   end
 
