@@ -5,7 +5,7 @@ class CreateListings < ActiveRecord::Migration[5.2]
       t.string :description
       t.string :start_date
       t.string :end_date
-      t.string :type
+      t.string :listing_type
       t.string :location
 
       t.timestamps
