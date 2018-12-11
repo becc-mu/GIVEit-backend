@@ -30,6 +30,7 @@ RSpec.describe ListingsController, type: :controller do
       ])
     end
   end
+
   describe "GET #show" do
     it "returns JSON of the listing" do
       listing = Listing.create({
@@ -55,6 +56,24 @@ RSpec.describe ListingsController, type: :controller do
           "updated_at"=>listing.updated_at.as_json
         }
       )
+    end
+  end
+
+  describe "POST #create" do
+    context "with valid params" do
+      it "creates a new listing" do
+        expect {
+          post :create, params: { listing: {
+              title: 'Listing Title',
+              description: 'Description',
+              start_date: 'Start Date',
+              end_date: 'End Date',
+              listing_type: 'Listing Type',
+              location: 'Location'
+            }
+          }
+        }.to change(Listing, :count).by(1)
+      end
     end
   end
 end
