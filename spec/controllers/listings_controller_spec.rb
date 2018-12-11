@@ -74,6 +74,23 @@ RSpec.describe ListingsController, type: :controller do
           }
         }.to change(Listing, :count).by(1)
       end
+
+      it "renders a JSON response with new listing" do
+        post :create, params: {listing: {
+            title: 'Listing Title',
+            description: 'Description',
+            start_date: 'Start Date',
+            end_date: 'End Date',
+            listing_type: 'Listing Type',
+            location: 'Location'
+          }
+        }
+
+        expect(response).to have_http_status(:created)
+        expect(response.content_type).to eq('application/json')
+        expect(response.location).to eq(listing_url(Listing.last))
+
+      end
     end
-  end
+  end # end of describe for the test
 end
