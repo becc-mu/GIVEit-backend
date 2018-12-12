@@ -94,7 +94,19 @@ RSpec.describe ListingsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       it "updates the requested listing" do
-        
+        listing = Listing.create(valid_listing_attributes)
+        new_attributes = {
+          title: 'Listing Title Updated',
+          description: 'Description',
+          start_date: 'Start Date',
+          end_date: 'End Date',
+          listing_type: 'Listing Type',
+          location: 'Location'
+        }
+        put :update, params: { id: listing.to_param, listing: new_attributes }
+        listing.reload
+
+        expect(listing.title).to eq new_attributes[:title]
       end
 
       it "renders a JSON response with the listing" do

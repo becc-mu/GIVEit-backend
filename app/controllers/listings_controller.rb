@@ -20,8 +20,22 @@ class ListingsController < ApplicationController
     end
   end
 
+  def update
+    @listing = Listing.find(params[:id])
+
+    if @listing.update(update_listing_params)
+      render json: @listing
+    else
+      render json: @listing.errors, status: :unprocessable_entity
+    end
+  end
+
   private
     def create_listing_params
+      params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location)
+    end
+
+    def update_listing_params
       params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location)
     end
 end
