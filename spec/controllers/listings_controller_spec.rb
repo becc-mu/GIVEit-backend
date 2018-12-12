@@ -12,6 +12,10 @@ RSpec.describe ListingsController, type: :controller do
     }
   }
 
+  let(:invalid_listing_attributes) {
+    {}
+  }
+
   describe "GET #index" do
     it "returns a JSON list of the listings" do
       listing = Listing.create(valid_listing_attributes)
