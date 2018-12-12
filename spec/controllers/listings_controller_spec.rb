@@ -85,10 +85,39 @@ RSpec.describe ListingsController, type: :controller do
             location: 'Location'
           }
         }
-
         expect(response).to have_http_status(:created)
         expect(response.content_type).to eq('application/json')
         expect(response.location).to eq(listing_url(Listing.last))
+      end
+    end
+    context "with invalid params" do
+      it "renders a JSON response with errors for the new listing" do
+
+      end
+    end
+  end
+
+  describe "PUT #update" do
+    context "with valid params" do
+      it "updates the requested listing" do
+
+      end
+
+      it "renders a JSON response with the listing" do
+
+      end
+    end
+
+    context "with invalid params" do
+      it "renders a JSON response with errors for the listing" do
+        
+      end
+    end
+  end
+
+  describe "DELETE #destroy" do
+    context "with valid params" do
+      it "destroys the requested listing" do
 
       end
     end
