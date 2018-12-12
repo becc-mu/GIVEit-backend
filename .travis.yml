@@ -13,4 +13,5 @@ deploy:
     production: GIVEit-backend
   on:
     repo: becc-mu/GIVEit-backend
+    branch: master
   run: rails db:migrate
