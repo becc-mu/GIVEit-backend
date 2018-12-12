@@ -30,6 +30,10 @@ class ListingsController < ApplicationController
     end
   end
 
+  def destroy
+    @listing = Listing.find(params[:id])
+    @listing.destroy 
+  end
   private
     def create_listing_params
       params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location)

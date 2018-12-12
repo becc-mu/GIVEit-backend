@@ -125,16 +125,20 @@ RSpec.describe ListingsController, type: :controller do
       end
     end
 
-    context "with invalid params" do
-      it "renders a JSON response with errors for the listing" do
-
-      end
-    end
+    # context "with invalid params" do
+    #   it "renders a JSON response with errors for the listing" do
+    #
+    #   end
+    # end
   end
 
   describe "DELETE #destroy" do
     context "with valid params" do
       it "destroys the requested listing" do
+        listing = Listing.create(valid_listing_attributes)
+        expect {
+          delete :destroy, params: {id: listing.to_param}
+        }.to change(Listing, :count).by(-1)
 
       end
     end
