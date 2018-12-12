@@ -110,7 +110,18 @@ RSpec.describe ListingsController, type: :controller do
       end
 
       it "renders a JSON response with the listing" do
-
+        listing = Listing.create(valid_listing_attributes)
+        new_attributes = {
+          title: 'Listing Title Updated',
+          description: 'Description',
+          start_date: 'Start Date',
+          end_date: 'End Date',
+          listing_type: 'Listing Type',
+          location: 'Location'
+        }
+        put :update, params: { id: listing.to_param, listing: new_attributes }
+        expect(response).to have_http_status(:ok)
+        expect(response.content_type).to eq('application/json')
       end
     end
 
