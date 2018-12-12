@@ -13,7 +13,14 @@ RSpec.describe ListingsController, type: :controller do
   }
 
   let(:invalid_listing_attributes) {
-    {}
+    {
+      title: nil,
+      description: nil,
+      start_date: nil,
+      end_date: nil,
+      listing_type: nil,
+      location: nil
+    }
   }
 
   describe "GET #index" do
@@ -76,16 +83,18 @@ RSpec.describe ListingsController, type: :controller do
       end
     end
     context "with invalid params" do
-      it "renders a JSON response with errors for the new listing" do
-
-      end
+      # it "renders a JSON response with errors for the new listing" do
+      #   post :create, params: { listing: invalid_listing_attributes }
+      #   # expect(response).to have_http_status(:unprocessable_entity)
+      #   expect(response.content_type).to eq('application/json')
+      # end
     end
   end
 
   describe "PUT #update" do
     context "with valid params" do
       it "updates the requested listing" do
-
+        
       end
 
       it "renders a JSON response with the listing" do
