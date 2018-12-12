@@ -92,5 +92,5 @@ RSpec.describe ListingsController, type: :controller do
 
       end
     end
-  end # end of describe for the test
+  end
 end
