@@ -36,6 +36,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner'
   gem 'faker'
+  gem 'rubocop'
   gem 'shoulda-matchers', '~> 3.1'
 end
 
