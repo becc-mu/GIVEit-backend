@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ListingsController < ApplicationController
   def index
     @listings = Listing.all
@@ -32,14 +34,16 @@ class ListingsController < ApplicationController
 
   def destroy
     @listing = Listing.find(params[:id])
-    @listing.destroy 
+    @listing.destroy
   end
-  private
-    def create_listing_params
-      params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location)
-    end
 
-    def update_listing_params
-      params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location)
-    end
+  private
+
+  def create_listing_params
+    params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location)
+  end
+
+  def update_listing_params
+    params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location)
+  end
 end
