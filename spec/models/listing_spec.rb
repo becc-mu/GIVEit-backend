@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Listing, type: :model do
-  it "can create a valid listing" do
+  it 'can create a valid listing' do
     valid_listing = Listing.new(
       title: 'Listing Title',
       description: 'Description',
