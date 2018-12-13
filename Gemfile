@@ -38,6 +38,8 @@ group :development, :test do
   gem 'faker'
   gem 'rubocop'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'simplecov'
+  gem 'simplecov-console'
 end
 
 group :development do
