@@ -13,7 +13,10 @@ Listing.create(
   start_date: 'Start Date',
   end_date: 'End Date',
   listing_type: 'Listing Type',
-  location: 'Location'
+  location: 'Location',
+  phone_number: '1234',
+  email: 'email@example.com',
+  user_name: 'Sam'
 )
 
 Listing.create(
@@ -22,5 +25,8 @@ Listing.create(
   start_date: 'Start Date',
   end_date: 'End Date',
   listing_type: 'Listing Type',
-  location: 'Location'
+  location: 'Location',
+  phone_number: '1234',
+  email: 'email@example.com',
+  user_name: 'Sam'
 )
