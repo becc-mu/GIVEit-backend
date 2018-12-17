@@ -9,7 +9,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: NxtKqha9xhdVnOmP5CJzu31gStb7K5Oq/oBD6UEoOBeMCxx4KqUzzBuWAxXsCfqLPvcR1QqjHDSisFflMDUsMqIXdUsrNd6zuKW5eHBsGBgdjDEfyDNOxAR+Z1kIN7bWrUmD7ah59jcX9xZTZjTjYgi0Bm3g+kGDDcBUq3NW84UVoccraIsEqZf+0YCVIloKGGMWKOG9h1f+2cCBPKRNkOmhs2RimTCHQB77P3on2G54D25Dm2aUf7DwZSD6TLpQFv0mX4OI0f8WtcH1uTrsLGJbhRRToogJGWMUiv/REte9hjyQnmGwaQpHKzNNPeATtI02o72RNMfTfor8Fder0DcyiipqAc2slkqaOhRXtGUZTbtkMJRqw+yKopR5ppgPYpQtSWR47Zorr5na5Mta6qXMsU6PKYYlqOuCkAvZcuv0Q91/d8WkqNIoyCkC8Gacjp7jWj4Q2GZTFTwUmMAuONI7f8/aPf6DTnyfRqmkA66xBsZ/RUYopCgvMO+qwysDqkr/gQqXAXBoEu9bHDVwHoFEJVKO+xj1N1bgH7zQJkajq1Ty4qY1ImD6+eBkliv/zcsJ3rEQQglXGeMB/IODTFg4IhPTS/ISZ2zu2Nu3j7OPSHkpHpDpqs1Ho8Xur2KOHR81l63XjuI8UhIX/m9cPAZ4vOV4aq9cc67Fhepc92I=
+    secure: 
   app: giveit-backend
   on:
     repo: becc-mu/GIVEit-backend
