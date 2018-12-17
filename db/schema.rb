@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 2018_12_11_111758) do
     t.string "end_date"
     t.string "listing_type"
     t.string "location"
+    t.string "phone_number"
+    t.string "email"
+    t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
