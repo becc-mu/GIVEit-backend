@@ -117,7 +117,10 @@ RSpec.describe ListingsController, type: :controller do
           start_date: 'Start Date',
           end_date: 'End Date',
           listing_type: 'Listing Type',
-          location: 'Location'
+          location: 'Location',
+          phone_number: 'phone_number',
+          email: 'email',
+          user_name: 'user_name'
         }
         put :update, params: { id: listing.to_param, listing: new_attributes }
         listing.reload
@@ -133,7 +136,10 @@ RSpec.describe ListingsController, type: :controller do
           start_date: 'Start Date',
           end_date: 'End Date',
           listing_type: 'Listing Type',
-          location: 'Location'
+          location: 'Location',
+          phone_number: 'phone_number',
+          email: 'email',
+          user_name: 'user_name'
         }
         put :update, params: { id: listing.to_param, listing: new_attributes }
         expect(response).to have_http_status(:ok)
