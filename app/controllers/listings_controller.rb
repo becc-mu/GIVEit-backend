@@ -40,10 +40,10 @@ class ListingsController < ApplicationController
   private
 
   def create_listing_params
-    params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location)
+    params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location, :phone_number, :email, :user_name)
   end
 
   def update_listing_params
-    params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location)
+    params.require(:listing).permit(:title, :description, :start_date, :end_date, :listing_type, :location, :location, :email, :user_name)
   end
 end
