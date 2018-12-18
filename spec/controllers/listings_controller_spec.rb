@@ -10,7 +10,10 @@ RSpec.describe ListingsController, type: :controller do
       start_date: 'Start Date',
       end_date: 'End Date',
       listing_type: 'Listing Type',
-      location: 'Location'
+      location: 'Location',
+      phone_number: '1234',
+      email: 'email@example.com',
+      user_name: 'Sam'
     }
   end
 
@@ -21,7 +24,10 @@ RSpec.describe ListingsController, type: :controller do
       start_date: nil,
       end_date: nil,
       listing_type: nil,
-      location: nil
+      location: nil,
+      phone_number: nil,
+      email: nil,
+      user_name: nil
     }
   end
 
@@ -41,8 +47,15 @@ RSpec.describe ListingsController, type: :controller do
                                                   'end_date' => listing.end_date,
                                                   'listing_type' => listing.listing_type,
                                                   'location' => listing.location,
+                                                  'phone_number' =>
+                                                  listing.phone_number,
+                                                  'email' =>
+                                                  listing.email,
+                                                  'user_name' =>
+                                                  listing.user_name,
                                                   'created_at' => listing.created_at.as_json,
                                                   'updated_at' => listing.updated_at.as_json
+
                                                 }
                                               ])
     end
@@ -61,6 +74,9 @@ RSpec.describe ListingsController, type: :controller do
         'end_date' => listing.end_date,
         'listing_type' => listing.listing_type,
         'location' => listing.location,
+        'phone_number' => listing.phone_number,
+        'email' => listing.email,
+        'user_name' => listing.user_name,
         'created_at' => listing.created_at.as_json,
         'updated_at' => listing.updated_at.as_json
       )
@@ -101,7 +117,10 @@ RSpec.describe ListingsController, type: :controller do
           start_date: 'Start Date',
           end_date: 'End Date',
           listing_type: 'Listing Type',
-          location: 'Location'
+          location: 'Location',
+          phone_number: 'phone_number',
+          email: 'email',
+          user_name: 'user_name'
         }
         put :update, params: { id: listing.to_param, listing: new_attributes }
         listing.reload
@@ -117,7 +136,10 @@ RSpec.describe ListingsController, type: :controller do
           start_date: 'Start Date',
           end_date: 'End Date',
           listing_type: 'Listing Type',
-          location: 'Location'
+          location: 'Location',
+          phone_number: 'phone_number',
+          email: 'email',
+          user_name: 'user_name'
         }
         put :update, params: { id: listing.to_param, listing: new_attributes }
         expect(response).to have_http_status(:ok)

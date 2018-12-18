@@ -42,6 +42,7 @@ I want to see the listing location on Google Maps
 First, clone this repository. Then:
 
 ```bash
+> Download and Install Postgress 
 > bundle install
 > bin/rails db:create
 > bin/rails db:migrate

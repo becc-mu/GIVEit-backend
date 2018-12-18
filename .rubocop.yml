@@ -3,3 +3,10 @@ AllCops:
   Exclude:
     - db/schema.rb
     - vendor/bundle/**/*
+Style/Encoding:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 150
+Metrics/BlockLength:
+  Max: 140
