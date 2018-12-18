@@ -2,7 +2,7 @@
 
 This is a 2-week final project we undertook at Makers.
 
-Here is a link to our app in production:
+Here is a link to our app in production: https://giveit-backend.herokuapp.com/listings
 
 ## Features
 
