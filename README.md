@@ -2,6 +2,8 @@
 
 This is a 2-week final project we undertook at Makers.
 
+This application consists of a [ReactJS front-end](https://github.com/MugeHasilci/GIVEit-frontend) and a Rails API, this repo houses the latter.
+
 Here is a link to our app in production: https://giveit-backend.herokuapp.com/listings
 
 ## Features
@@ -54,3 +56,10 @@ First, clone this repository. Then:
 ## Contributing
 
 Feel free to open a GitHub issue with anything you notice. Fork then clone the repository if you want to make any changes, then make a pull request with your changes. Changes must be approved in a pull request before being merged into the master branch.
+
+## Team Members
+[Muna Hussein](https://github.com/MHUS25) |
+[Muge Hasilci](https://github.com/MugeHasilci) |
+[Henry Cooksley](https://github.com/hnryjmes)  |
+[Ryan Clark](https://github.com/RyanWolfen7)  |
+[Rebecca Mulugeta](https://github.com/becc-mu)
